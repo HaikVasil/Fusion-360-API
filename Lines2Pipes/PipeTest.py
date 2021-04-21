@@ -48,12 +48,10 @@ def run(context):
         circle = sketch.sketchCurves.sketchCircles.addByCenterRadius(center, pipeRadius)
         profile = sketch.profiles[0]
 
-
-        # Set the expression of the parameter
         # Add a diameter constraint.
         skDim = sketch.sketchDimensions.addDiameterDimension(circle, adsk.core.Point3D.create(5,5,0), True)
-        # Set the expression of the parameter controlling the dimension constraint.
-        skDim.parameter.expression = 'D_fillament'
+        # Uncomment the following to Set the expression of the parameter controlling the dimension constraint.
+        # skDim.parameter.expression = 'D_fillament'
 
         profile = sketch.profiles[0]
 
